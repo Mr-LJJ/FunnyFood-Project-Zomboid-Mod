@@ -1,0 +1,6 @@
+version=1
+id=2973068345
+title=FunnyFood
+description=ÄãÊ³²»Ê³ÓÍ±ı£¿
+tags=Food;Items;Multiplayer;Silly/Fun
+visibility=public

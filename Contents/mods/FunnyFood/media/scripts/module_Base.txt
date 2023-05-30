@@ -1,0 +1,406 @@
+module Base
+{
+	item laoganmacan
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.8,
+		Type 		= Normal,
+		DisplayName 		= 老干妈,
+		Icon 		= laoganma,
+		WorldStaticModel 		= laoganma,
+		Packaged 		= TRUE,
+		CannedFood 		= TRUE,
+	}
+	item laoganma
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.8,
+		Type 		= Food,
+		DisplayName 		= 老干妈辣酱,
+		Icon 		= laoganma,
+		WorldStaticModel 		= laoganma,
+		DaysFresh 		= 5,
+		DaysTotallyRotten 		= 10,
+		HungerChange 		= -50,
+		ThirstChange 		= 30,
+		Calories 		= 3613,
+		Carbohydrates 		= 136,
+		Lipids 		= 301,
+		Proteins 		= 97,
+		ReplaceOnUse 		= EmptyJar,
+		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
+	}
+	recipe 打开一瓶老干妈
+	{
+		laoganmacan,
+		Result 		: laoganma,
+		Time 		: 30,
+		Category 		: Cooking,
+		OnCreate 		: Recipe.OnCreate.OpenCannedFood,
+		OnGiveXP 		: Recipe.OnGiveXP.None,
+	}
+	item furucan
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 1,
+		Type 		= Normal,
+		DisplayName 		= 一瓶腐乳,
+		Icon 		= furu,
+		WorldStaticModel 		= furu,
+		Packaged 		= TRUE,
+		CannedFood 		= TRUE,
+	}
+	item jiucaihuacan
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.8,
+		Type 		= Normal,
+		DisplayName 		= 一瓶腌韭菜花,
+		Icon 		= jiucaihua,
+		WorldStaticModel 		= jiucaihua,
+		Packaged 		= TRUE,
+		CannedFood 		= TRUE,
+	}
+	item furu
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 1,
+		Type 		= Food,
+		DisplayName 		= 腐乳,
+		Icon 		= furu,
+		WorldStaticModel 		= furu,
+		DaysFresh 		= 10,
+		DaysTotallyRotten 		= 20,
+		HungerChange 		= -80,
+		ThirstChange 		= 15,
+		Calories 		= 765,
+		Carbohydrates 		= 60,
+		Lipids 		= 41,
+		Proteins 		= 97,
+		ReplaceOnUse 		= EmptyJar,
+		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
+	}
+	item jiucaihua
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.8,
+		Type 		= Food,
+		DisplayName 		= 腌韭菜花,
+		Icon 		= jiucaihua,
+		WorldStaticModel 		= jiucaihua,
+		DaysFresh 		= 5,
+		DaysTotallyRotten 		= 10,
+		HungerChange 		= -30,
+		ThirstChange 		= 30,
+		Calories 		= 85,
+		Carbohydrates 		= 5,
+		Lipids 		= 1.5,
+		Proteins 		= 12.5,
+		ReplaceOnUse 		= EmptyJar,
+		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
+	}
+	recipe 打开一瓶腌韭菜花
+	{
+		jiucaihuacan,
+		Result 		: jiucaihua,
+		Time 		: 30,
+		Category 		: Cooking,
+		OnCreate 		: Recipe.OnCreate.OpenCannedFood,
+		OnGiveXP 		: Recipe.OnGiveXP.None,
+	}
+	recipe 打开一瓶腐乳
+	{
+		furucan,
+		Result 		: furu,
+		Time 		: 30,
+		Category 		: Cooking,
+		OnCreate 		: Recipe.OnCreate.OpenCannedFood,
+		OnGiveXP 		: Recipe.OnGiveXP.None,
+	}
+	item xiaohanbao
+	{
+		DisplayCategory 		= Food,
+		HungerChange 		= -70,
+		Weight 		= 0.5,
+		Type 		= Food,
+		UnhappyChange 		= -20,
+		DisplayName 		= 秘制小汉堡,
+		DaysTotallyRotten 		= 5,
+		DaysFresh 		= 3,
+		Icon 		= Burger,
+		Carbohydrates 		= 0,
+		Proteins 		= 35,
+		Lipids 		= 45,
+		Calories 		= 560,
+		StaticModel 		= Burger,
+		EatType 		= 2handforced,
+		WorldStaticModel 		= Burger_Ground,
+		StressChange 		= -30,
+	}
+	item maotai
+	{
+		DisplayCategory 		= Food,
+		HungerChange 		= -35,
+		Weight 		= 1,
+		Type 		= Food,
+		ThirstChange 		= -50,
+		UnhappyChange 		= -50,
+		DisplayName 		= 飞天茅台,
+		Alcoholic 		= TRUE,
+		ReplaceOnUse 		= WineEmpty,
+		Icon 		= maotai,
+		CustomContextMenu 		= Drink,
+		CustomEatSound 		= DrinkingFromBottleGlass,
+		Carbohydrates 		= 0,
+		Proteins 		= 0,
+		Lipids 		= 0,
+		Calories 		= 561,
+		Packaged 		= TRUE,
+		CantBeFrozen 		= TRUE,
+		StaticModel 		= maotai,
+		WorldStaticModel 		= maotai,
+		EatType 		= Bourbon,
+	}
+	item xiaoniaovodka
+	{
+		DisplayCategory 		= Food,
+		HungerChange 		= -30,
+		Weight 		= 1,
+		Type 		= Food,
+		ThirstChange 		= -50,
+		UnhappyChange 		= -80,
+		DisplayName 		= 小鸟伏特加,
+		Alcoholic 		= TRUE,
+		ReplaceOnUse 		= WineEmpty,
+		Icon 		= xiaoniaovodka,
+		CustomContextMenu 		= Drink,
+		CustomEatSound 		= DrinkingFromBottleGlass,
+		Carbohydrates 		= 0,
+		Proteins 		= 0,
+		Lipids 		= 0,
+		Calories 		= 654,
+		Packaged 		= TRUE,
+		CantBeFrozen 		= TRUE,
+		StaticModel 		= xiaoniaovodka,
+		WorldStaticModel 		= xiaoniaovodka,
+		EatType 		= Bourbon,
+	}
+	item qiepiantusi
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.4,
+		Type 		= Food,
+		DisplayName 		= 切片吐司,
+		Icon 		= qiepiantusi,
+		WorldStaticModel 		= qiepiantusi,
+		DaysFresh 		= 3,
+		DaysTotallyRotten 		= 5,
+		HungerChange 		= -10,
+		ThirstChange 		= 2,
+		Calories 		= 334,
+		Carbohydrates 		= 60,
+		Lipids 		= 5,
+		Proteins 		= 11,
+	}
+	item shengcai
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.2,
+		Type 		= Food,
+		DisplayName 		= 生菜,
+		Icon 		= shengcai,
+		WorldStaticModel 		= shengcai,
+		DaysFresh 		= 3,
+		DaysTotallyRotten 		= 5,
+		HungerChange 		= -5,
+		ThirstChange 		= -5,
+		Calories 		= 12,
+		Carbohydrates 		= 1.1,
+		Lipids 		= 0.4,
+		Proteins 		= 1.6,
+	}
+	item choudoufucan
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.8,
+		Type 		= Normal,
+		DisplayName 		= 一瓶臭豆腐,
+		Icon 		= choudoufu,
+		WorldStaticModel 		= choudoufu,
+		Packaged 		= TRUE,
+		CannedFood 		= TRUE,
+	}
+	item choudoufu
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.8,
+		Type 		= Food,
+		DisplayName 		= 臭豆腐,
+		Icon 		= choudoufu,
+		WorldStaticModel 		= choudoufu,
+		DaysFresh 		= 5,
+		DaysTotallyRotten 		= 10,
+		HungerChange 		= -50,
+		ThirstChange 		= 20,
+		Calories 		= 132,
+		Carbohydrates 		= 3.9,
+		Lipids 		= 8.9,
+		Proteins 		= 11.6,
+		ReplaceOnUse 		= EmptyJar,
+		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
+	}
+	recipe 打开一瓶臭豆腐
+	{
+		choudoufucan,
+		Result 		: choudoufu,
+		Time 		: 30,
+		Category 		: Cooking,
+		OnCreate 		: Recipe.OnCreate.OpenCannedFood,
+		OnGiveXP 		: Recipe.OnGiveXP.None,
+	}
+	item zhacaipack
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.5,
+		Type 		= Normal,
+		DisplayName 		= 一包榨菜,
+		Icon 		= zhacai,
+		WorldStaticModel 		= zhacai,
+		Packaged 		= TRUE,
+		CannedFood 		= TRUE,
+	}
+	item zhacai
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.5,
+		Type 		= Food,
+		DisplayName 		= 榨菜,
+		Icon 		= zhacai,
+		WorldStaticModel 		= zhacai,
+		DaysFresh 		= 5,
+		DaysTotallyRotten 		= 10,
+		HungerChange 		= -15,
+		ThirstChange 		= 40,
+		Calories 		= 33,
+		Carbohydrates 		= 6.5,
+		Lipids 		= 1,
+		Proteins 		= 2.2,
+	}
+	item chouluxiacan
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.8,
+		Type 		= Normal,
+		DisplayName 		= 一瓶臭卤虾,
+		Icon 		= chouluxia,
+		WorldStaticModel 		= chouluxia,
+		Packaged 		= TRUE,
+		CannedFood 		= TRUE,
+	}
+	item chouluxia
+	{
+		DisplayCategory 		= Food,
+		Weight 		= 0.8,
+		Type 		= Food,
+		DisplayName 		= 臭卤虾,
+		Icon 		= chouluxia,
+		WorldStaticModel 		= chouluxia,
+		DaysFresh 		= 10,
+		DaysTotallyRotten 		= 20,
+		HungerChange 		= -30,
+		ThirstChange 		= 20,
+		Calories 		= 112,
+		Carbohydrates 		= 0,
+		Lipids 		= 7.6,
+		Proteins 		= 10.8,
+		ReplaceOnUse 		= EmptyJar,
+		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
+	}
+	recipe 打开一瓶臭卤虾
+	{
+		chouluxiacan,
+		Result 		: chouluxia,
+		Time 		: 30,
+		Category 		: Cooking,
+		OnCreate 		: Recipe.OnCreate.OpenCannedFood,
+		OnGiveXP 		: Recipe.OnGiveXP.None,
+	}
+	recipe 制作一瓶老干妈
+	{
+		EmptyJar,
+		JarLid,
+		CannedChiliOpen,
+		Water=10,
+		Salt=2,
+		Sugar=1,
+		Result 		: laoganmacan,
+		Time 		: 100.0,
+		OnCreate 		: Recipe.OnCreate.CannedFood,
+		Category 		: Cooking,
+		OnGiveXP 		: Recipe.OnGiveXP.Cooking10,
+	}
+	recipe 制作一瓶臭卤虾
+	{
+		EmptyJar,
+		JarLid,
+		Shrimp,
+		Water=10,
+		Salt=2,
+		Sugar=1,
+		Result 		: laoganmacan,
+		Time 		: 100.0,
+		OnCreate 		: Recipe.OnCreate.CannedFood,
+		Category 		: Cooking,
+		OnGiveXP 		: Recipe.OnGiveXP.Cooking10,
+	}
+	recipe 制作老八秘制小汉堡
+	{
+		qiepiantusi,
+		zhacai,
+		chouluxia,
+		shengcai,
+		furu,
+		jiucaihua,
+		laoganma,
+		choudoufu,
+		qiepiantusi,
+		Result 		: mizhihanbao,
+		Time 		: 100.0,
+		OnCreate 		: Recipe.OnCreate.CannedFood,
+		Category 		: Cooking,
+		OnGiveXP 		: Recipe.OnGiveXP.Cooking10,
+	}
+	item mizhihanbao
+	{
+		DisplayCategory 		= Food,
+		HungerChange 		= -99,
+		Weight 		= 0.5,
+		Type 		= Food,
+		UnhappyChange 		= -99,
+		DisplayName 		= 老八秘制小汉堡,
+		DaysTotallyRotten 		= 30,
+		DaysFresh 		= 15,
+		Icon 		= Burger,
+		Carbohydrates 		= 0,
+		Proteins 		= 35,
+		Lipids 		= 45,
+		Calories 		= 560,
+		StaticModel 		= Burger,
+		EatType 		= 2handforced,
+		WorldStaticModel 		= Burger_Ground,
+		StressChange 		= -99,
+		ThirstChange 		= -99,
+		EnduranceChange 		= -99,
+		CriticalChance 		= -99,
+		FatigueChange 		= -99,
+	}
+	recipe 打开一包榨菜
+	{
+		zhacaipack,
+		Result 		: zhacai,
+		Time 		: 30,
+		Category 		: Cooking,
+		OnCreate 		: Recipe.OnCreate.OpenCannedFood,
+		OnGiveXP 		: Recipe.OnGiveXP.None,
+	}
+}
