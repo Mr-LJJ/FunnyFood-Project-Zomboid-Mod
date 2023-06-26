@@ -27,7 +27,6 @@ module Base
 		Carbohydrates 		= 136,
 		Lipids 		= 301,
 		Proteins 		= 97,
-		ReplaceOnUse 		= EmptyJar,
 		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
 	}
 	recipe 打开一瓶老干妈
@@ -77,7 +76,6 @@ module Base
 		Carbohydrates 		= 60,
 		Lipids 		= 41,
 		Proteins 		= 97,
-		ReplaceOnUse 		= EmptyJar,
 		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
 	}
 	item jiucaihua
@@ -96,7 +94,6 @@ module Base
 		Carbohydrates 		= 5,
 		Lipids 		= 1.5,
 		Proteins 		= 12.5,
-		ReplaceOnUse 		= EmptyJar,
 		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
 	}
 	recipe 打开一瓶腌韭菜花
@@ -196,7 +193,7 @@ module Base
 		DaysFresh 		= 3,
 		DaysTotallyRotten 		= 5,
 		HungerChange 		= -10,
-		ThirstChange 		= 2,
+		ThirstChange 		= 1,
 		Calories 		= 334,
 		Carbohydrates 		= 60,
 		Lipids 		= 5,
@@ -218,6 +215,7 @@ module Base
 		Carbohydrates 		= 1.1,
 		Lipids 		= 0.4,
 		Proteins 		= 1.6,
+		FoodType 		= Vegetables,
 	}
 	item choudoufucan
 	{
@@ -246,7 +244,6 @@ module Base
 		Carbohydrates 		= 3.9,
 		Lipids 		= 8.9,
 		Proteins 		= 11.6,
-		ReplaceOnUse 		= EmptyJar,
 		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
 	}
 	recipe 打开一瓶臭豆腐
@@ -313,7 +310,6 @@ module Base
 		Carbohydrates 		= 0,
 		Lipids 		= 7.6,
 		Proteins 		= 10.8,
-		ReplaceOnUse 		= EmptyJar,
 		EvolvedRecipe 		= Stew:15;Stir fry Griddle Pan:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15;Taco:15;Burrito:15,Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Sandwich:1;Sandwich Baguette:1;Taco:1;Burrito:1,,
 	}
 	recipe 打开一瓶臭卤虾
@@ -378,13 +374,13 @@ module Base
 		Type 		= Food,
 		UnhappyChange 		= -99,
 		DisplayName 		= 老八秘制小汉堡,
-		DaysTotallyRotten 		= 30,
-		DaysFresh 		= 15,
+		DaysTotallyRotten 		= 60,
+		DaysFresh 		= 30,
 		Icon 		= Burger,
 		Carbohydrates 		= 0,
-		Proteins 		= 35,
-		Lipids 		= 45,
-		Calories 		= 560,
+		Proteins 		= 70,
+		Lipids 		= 90,
+		Calories 		= 1120,
 		StaticModel 		= Burger,
 		EatType 		= 2handforced,
 		WorldStaticModel 		= Burger_Ground,
@@ -402,5 +398,93 @@ module Base
 		Category 		: Cooking,
 		OnCreate 		: Recipe.OnCreate.OpenCannedFood,
 		OnGiveXP 		: Recipe.OnGiveXP.None,
+	}
+	recipe 制作老八秘制小汉堡2
+	{
+		qiepiantusi,
+		zhacai,
+		chouluxia,
+		Lettuce,
+		furu,
+		jiucaihua,
+		laoganma,
+		choudoufu,
+		BreadSlices,
+		Result 		: mizhihanbao,
+		Time 		: 100.0,
+		OnCreate 		: Recipe.OnCreate.CannedFood,
+		Category 		: Cooking,
+		OnGiveXP 		: Recipe.OnGiveXP.Cooking10,
+	}
+	item xiangjingjianyu
+	{
+		DisplayCategory 		= Food,
+		HungerChange 		= -30,
+		Weight 		= 0.2,
+		Type 		= Food,
+		IsCookable 		= TRUE,
+		DaysTotallyRotten 		= 4,
+		MinutesToBurn 		= 50,
+		DisplayName 		= 香精煎鱼,
+		Icon 		= Item_FishCooked,
+		DaysFresh 		= 2,
+		MinutesToCook 		= 20,
+		Carbohydrates 		= 2,
+		Proteins 		= 56,
+		Lipids 		= 24,
+		Calories 		= 410,
+		EvolvedRecipe 		= Soup:15;Stew:15;Pie:15;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Sandwich Baguette:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+		FoodType 		= Fish,
+		BadInMicrowave 		= true,
+		GoodHot 		= true,
+		WorldStaticModel 		= FishFillet,
+		Tags 		= FishMeat,
+	}
+	item youbing
+	{
+		Type 		= Food,
+		DisplayName 		= 油饼,
+		Icon 		= CookiesOatmeal,
+		Weight 		= 0.1,
+		HungerChange 		= -10,
+		UnhappyChange 		= -20,
+		Carbohydrates 		= 40,
+		Proteins 		= 2,
+		Lipids 		= 12,
+		Calories 		= 220,
+		CustomEatSound 		= EatingCrispy,
+		WorldStaticModel 		= Cookie_Oatmeal_Ground,
+	}
+	item shenjingbing
+	{
+		Type 		= Food,
+		DisplayName 		= 圣金饼,
+		Icon 		= CookiesChocolate,
+		Weight 		= 0.1,
+		HungerChange 		= -15,
+		UnhappyChange 		= -15,
+		Carbohydrates 		= 40,
+		Proteins 		= 2,
+		Lipids 		= 12,
+		Calories 		= 220,
+		CustomEatSound 		= EatingCrispy,
+		WorldStaticModel 		= Cookie_Chocolate_Ground,
+	}
+	item zhenmeisuzhi
+	{
+		DisplayCategory 		= Food,
+		HungerChange 		= -50,
+		Weight 		= 0.5,
+		Type 		= Food,
+		DaysTotallyRotten 		= 8,
+		DisplayName 		= 蒸梅酥芝,
+		Icon 		= Pie,
+		DaysFresh 		= 10,
+		Carbohydrates 		= 40,
+		Proteins 		= 110,
+		Lipids 		= 40,
+		Calories 		= 808,
+		StaticModel 		= PieSlice,
+		WorldStaticModel 		= Pie,
 	}
 }

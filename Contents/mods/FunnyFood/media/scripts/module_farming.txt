@@ -1,0 +1,13 @@
+module farming
+{
+	imports
+	{
+		Base,
+	}
+	recipe 撕开 菜
+	{
+		Lettuce,
+		Result 		: shengcai=10,
+		Time 		: 200.0,
+	}
+}
